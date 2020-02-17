@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val cityNameEditText = findViewById<TextInputEditText>(R.id.edittext_city_name)
         val searchButton = findViewById<Button>(R.id.search_city_weather_button)
         searchButton.setOnClickListener {
-            val cityName = cityNameEditText.text.toString()
+            val cityName = cityNameEditText.text.toString().trim()
             if (ConnectivityManager.isInternetAvailable(this)) {
                 startWeatherListActivity(cityName)
             } else {
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         cityNameEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                startWeatherListActivity(cityNameEditText.text.toString())
+                startWeatherListActivity(cityNameEditText.text.toString().trim())
             }
             false
         }

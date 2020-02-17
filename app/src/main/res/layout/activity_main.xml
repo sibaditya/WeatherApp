@@ -5,19 +5,22 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/main_activity_bg">
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorBlack">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edittext_city_name"
             android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite"
             android:hint="@string/enter_city_name" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -29,6 +32,8 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="16sp"
+        android:background="@color/colorBlue"
+        android:textColor="@color/colorWhite"
         android:layout_marginTop="24dp"
         android:text="@string/search" />
 </LinearLayout>
