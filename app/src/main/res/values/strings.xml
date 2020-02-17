@@ -2,5 +2,17 @@
     <string name="app_name">Weather</string>
     <string name="something_went_wrong">Something went wrong, please try again!</string>
     <string name="internet_not_available">Internet not available, please try again!</string>
+    <string name="city_not_found">City not found. Please check your input text.</string>
+    <string name="invalid_input">Please enter a city name!!!</string>
     <string name="press_back_twice">"Please click BACK again to exit"</string>
+    <string name="enter_city_name">Enter City Name…</string>
+    <string name="search">Search</string>
+    <string name="wind_gust">WIND GUST</string>
+    <string name="actual_tempeature">%1$d\u2103</string>
+    <string name="weather_detail_actual_tempeature">Actual Temperature: %1$d\u2103</string>
+    <string name="feels_tempeature">Feels Like: %1$d\u2103</string>
+    <string name="min_tempeature">Minimum Temperature: %1$d\u2103</string>
+    <string name="max_tempeature">Maximum Temperature: %1$d\u2103</string>
+    <string name="wind_speed">%1$d KM/H</string>
+    <string name="please_wait">Please wait…</string>
 </resources>

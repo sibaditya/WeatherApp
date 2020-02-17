@@ -22,7 +22,7 @@ class ConnectivityManager(
     /**
      * Context
      */
-    private val mContext: Context
+    private val mContext: Context?
 ) {
     /**
      * Interface for callback
@@ -51,7 +51,7 @@ class ConnectivityManager(
             Response.Listener { response ->
                 Log.d(TAG, "on Success")
                 handleResponse(response, modelClass)
-            }, Response.ErrorListener { dataResponse.onFailure(mContext.getString(R.string.something_went_wrong)) }) {
+            }, Response.ErrorListener { dataResponse.onFailure(mContext?.getString(R.string.city_not_found)) }) {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 return HashMap()
@@ -87,8 +87,8 @@ class ConnectivityManager(
          * @param context [Context]
          * @return boolean
          */
-        fun isInternetAvailable(context: Context): Boolean {
-            val cm = (context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager)
+        fun isInternetAvailable(context: Context?): Boolean {
+            val cm = (context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager)
             val activeNetwork = cm.activeNetworkInfo
             return activeNetwork != null && activeNetwork.isConnectedOrConnecting
         }

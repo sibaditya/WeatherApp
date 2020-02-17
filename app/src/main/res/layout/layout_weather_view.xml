@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp">
+
+    <RelativeLayout
+        android:id="@+id/weather_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            tools:text="Mon" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentLeft="true"
+            tools:text="16 Feb 2020" />
+
+
+        <TextView
+            android:id="@+id/actual_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:layout_centerHorizontal="true"
+            tools:text="-10C" />
+
+        <TextView
+            android:id="@+id/feels_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actual_temp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            tools:text="-15c" />
+
+
+        <TextView
+            android:id="@+id/wind_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            tools:text="Mon" />
+
+        <TextView
+            android:id="@+id/wind_gust_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/wind_gust" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

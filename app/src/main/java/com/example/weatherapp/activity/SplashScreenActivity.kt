@@ -10,7 +10,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashScreenActivity : AppCompatActivity() {
-    private val MAIN_ACTIVITY_LAUNCH_DELAY = 2000L
+    private val MAIN_ACTIVITY_LAUNCH_DELAY = 1500L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +21,8 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(MAIN_ACTIVITY_LAUNCH_DELAY)
             val mainActivityIntent = Intent(this@SplashScreenActivity, MainActivity::class.java)
             startActivity(mainActivityIntent)
+            finish()
+            overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left)
         }
     }
 }
